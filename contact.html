@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hammad| Online Store</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- From Uiverse.io by ammarsaa -->
+    <form class="form">
+        <p class="title">hammad store</p>
+        <p class="message">Sign up</p>
+        <div class="flex">
+            <label>
+            <input class="input" type="text" placeholder="" required="">
+            <span>Firstname</span>
+        </label>
+
+            <label>
+            <input class="input" type="text" placeholder="" required="">
+            <span>Lastname</span>
+        </label>
+        </div>
+
+        <label>
+        <input class="input" type="email" placeholder="" required="">
+        <span>Email</span>
+    </label>
+
+        <label>
+        <input class="input" type="password" placeholder="" required="">
+        <span>Password</span>
+    </label>
+        <label>
+        <input class="input" type="password" placeholder="" required="">
+        <span>Confirm password</span>
+    </label>
+        <button class="submit">Submit</button>
+        <p class="signin">Already have an acount ? <a href="login html">Signin</a> </p>
+    </form>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            /* ارتفاع الشاشة بالكامل */
+            display: flex;
+            justify-content: center;
+            /* توسيط أفقياً */
+            align-items: center;
+            /* توسيط عمودياً */
+            background-color: #fff;
+            /* يمكنك تغييره حسب التصميم */
+            font-family: Arial, sans-serif;
+            /* اختيار خط مناسب */
+            box-sizing: border-box;
+            padding: 10px;
+            /* حشو بسيط لتجنب التصاق المحتوى بالحواف */
+        }
+        
+        .form {
+            width: 100%;
+            max-width: 350px;
+            /* باقي الخصائص */
+        }
+        /* From Uiverse.io by ammarsaa */
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 350px;
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            color: #fff;
+        }
+        
+        .title {
+            font-size: 30px;
+            letter-spacing: -1px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            color: #FF6D00;
+        }
+        
+        .title::before {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .title::after {
+            width: 18px;
+            height: 18px;
+            animation: pulse 1s linear infinite;
+        }
+        
+        .title::before,
+        .title::after {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            left: 0px;
+            background-color: #FF6D00;
+        }
+        
+        .message,
+        .signin {
+            font-size: 14.5px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .signin {
+            text-align: center;
+        }
+        
+        .signin a:hover {
+            text-decoration: underline #FF6D00;
+        }
+        
+        .signin a {
+            color: #FF6D00;
+        }
+        
+        .flex {
+            display: flex;
+            width: 100%;
+            gap: 6px;
+        }
+        
+        .form label {
+            position: relative;
+        }
+        
+        .form label .input {
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            padding: 25px 05px 05px 15px;
+            outline: 0;
+            border: 1px solid rgba(105, 105, 105, 0.397);
+            border-radius: 10px;
+        }
+        
+        .form label .input+span {
+            color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            left: 10px;
+            top: 0px;
+            font-size: 0.9em;
+            cursor: text;
+            transition: 0.3s ease;
+        }
+        
+        .form label .input:placeholder-shown+span {
+            top: 12.5px;
+            font-size: 0.9em;
+        }
+        
+        .form label .input:focus+span,
+        .form label .input:valid+span {
+            color: #FF6D00;
+            top: 0px;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+        
+        .input {
+            font-size: medium;
+        }
+        
+        .submit {
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            transform: .3s ease;
+            background-color: #FF6D00;
+        }
+        
+        .submit:hover {
+            background-color: #FF6D00;
+        }
+        
+        @keyframes pulse {
+            from {
+                transform: scale(0.9);
+                opacity: 1;
+            }
+            to {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
