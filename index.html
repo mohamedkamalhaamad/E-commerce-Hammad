@@ -1,19 +1,18 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hammad| Online Store</title>
+    <title>Hammad| Online Store</title>
 
 
-    <link rel="icon" href="icon.png">
+    <link rel="icon" href="img/icon.png">
 
 
 
 
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
@@ -24,15 +23,29 @@
 <body>
 
 
-    <div class="cart">
+    <div class="cart active">
         <div class="top_cart">
-            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <h3>Cart Items : <span class="Count_item_cart">1</span></h3>
             <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
         </div>
 
 
         <div class="items_in_cart" id="cart_items">
 
+            <div class="item_cart">
+                <img src="20.png" alt="">
+                <div class="content">
+                    <h4>Kenstar Ester ABS Plastic 750W Mixer Grinder</h4>
+                    <p class="price_cart">$280</p>
+                    <div class="quantity_control">
+                        <button class="decrease_quantity" data-index="0">-</button>
+                        <span class="quantity">1</span>
+                        <button class="Increase_quantity" data-index="0">+</button>
+                    </div>
+                </div>
+
+                <button class="delete_item" data-inex="0"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
 
 
         </div>
@@ -41,11 +54,11 @@
         <div class="bottom_cart">
             <div class="total">
                 <p>subtotal</p>
-                <p class="price_cart_toral">$0</p>
+                <p class="price_cart_toral">$ 280</p>
             </div>
 
             <div class="button_cart">
-                <a href="" class="btn_cart btn">Checkout</a>
+                <a href="checkout.html" class="btn_cart btn">Checkout</a>
                 <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
             </div>
         </div>
@@ -63,18 +76,14 @@
                         <select id="category" name="category">
 
                             <option value="All Categories">All Categories</option>
-                            <option value="Electronics & Digita">Electronics & Digita</option>
-                            <option value="Phones & Tablet">Phones & Tablety</option>
-                            <option value="Fashion & Clothings">Fashion & Clothings</option>
-                            <option value="Telivsion & Monitor">Telivsion & Monitor</option>
-                            <option value="Jewelry & Watches">Jewelry & Watches</option>
-                            <option value="Washing Machine">Washing Machine</option>
-                            <option value="Toys & Hobbies">Toys & Hobbies</option>
+                            <option value="Electronics &amp; Digita">Electronics</option>
+                            <option value="Phones &amp; Tablet">Phones</option>
+                            <option value="Telivsion &amp; Monitor">Telivsion</option>
 
                         </select>
                     </div>
 
-                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required="">
 
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -94,7 +103,7 @@
 
                     <div onclick="open_close_cart()" class="icon">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="count count_item_header">0</span>
+                        <span class="count count_item_header">1</span>
                     </div>
                 </div>
             </div>
@@ -118,13 +127,10 @@
 
 
                         <div class="category_nav_list">
-                            <a href="index.html">Top 10 Offers</a>
-                            <a href="Electronics.html">Electronics & Digita</a>
-                            <a href="index.html">Phones & Tablet</a>
-                            <a href="#">Fashion & Clothings</a>
-                            <a href="#">Telivsion & Monitor</a>
-                            <a href="#">Jewelry & Watches</a>
-                            <a href="#">Toys & Hobbies</a>
+                            <a href="#">Top 10 Offers</a>
+                            <a href="#">Electronic</a>
+                            <a href="#">Phones</a>
+                            <a href="#">TV</a>
                         </div>
 
                     </div>
@@ -133,11 +139,9 @@
 
                         <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
 
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="Electronics.html">Accesories</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Contact</a></li>
 
                     </ul>
 
@@ -154,38 +158,6 @@
 
 
     </header>
-
-
-    <div class="slider">
-        <div class="container">
-
-
-            <!-- Swiper -->
-            <div class="slide-swp mySwiper">
-
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#"><img src="banner_home1.png" alt=""></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#"><img src="banner_home2.png" alt=""></a>
-                    </div>
-
-
-                </div>
-                <div class="swiper-pagination"></div>
-
-            </div>
-
-
-            <div class="banner_2">
-                <a href="#"><img src="banner_home3.png" alt=""></a>
-            </div>
-
-        </div>
-    </div>
-
-
 
 
     <div class="banners_4">
@@ -275,203 +247,1312 @@
 
         <div class="container">
 
-            <div class="slide_product mySwiper">
+            <div class="slide_product mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
 
                 <div class="top_slide">
                     <h2><i class="fa-solid fa-tags"></i> Hot Deals</h2>
+                </div>
+
+                <div class="products swiper-wrapper" id="swiper_items_sale" aria-live="off" style="transition-duration: 300ms;">
 
 
 
-                    <div class="banners">
-                        <div class="container">
-                            <div class="banners_boxs banner_3_img">
-                                <a href="#" class="box"><img src="banner_box1.jpg" alt=""></a>
-                                <a href="#" class="box"><img src="banner_box2.jpg" alt=""></a>
-                                <a href="#" class="box"><img src="banner_box3.jpg" alt=""></a>
-                            </div>
+                    <div class="swiper-slide product" role="group" aria-label="1 / 7" data-swiper-slide-index="0" style="width: 164px; margin-right: 10px;">
+                        <span class="sale_present">%26</span>
+
+                        <div class="img_product">
+                            <a href="#"><img src="6.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">iphone X max (Galaxy gold, 4GB RAM, 64GB Storage)</a></p>
+
+                        <div class="price">
+                            <p><span>$800</span></p>
+                            <p class="old_price">$900</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="6">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
                         </div>
                     </div>
 
-                    <div class="slider_products slide">
-                        <div class="container">
-                            <div class="slide_product mySwiper">
-                                <div class="top_slide">
-                                    <h2><i class="fa-solid fa-tags"></i> Mobiles</h2>
-                                </div>
-                                <div class="cards">
-                                    <!-- Card 1 -->
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <img src="15.png" alt="iphone 8 plus">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="title">samsung</div>
-                                            <div class="small">Short description or small specifications</div>
-                                            <div class="footer">
-                                                <div>
-                                                    <div class="price">$399.99</div>
-                                                </div>
-                                                <button class="btn">Add to Cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card 2 -->
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <img src="18.png" alt="samsung s21">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="title">iphone</div>
-                                            <div class="small">Short description or small specifications</div>
-                                            <div class="footer">
-                                                <div>
-                                                    <div class="price">$499.00</div>
-                                                </div>
-                                                <button class="btn">Add to Cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card 3 -->
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <img src="download.jpg" alt="pixel">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="title">iphone 16 pro max</div>
-                                            <div class="small"> Short description or small specifications</div>
-                                            <div class="footer">
-                                                <div>
-                                                    <div class="price">$429.50</div>
-                                                </div>
-                                                <button class="btn">Add to Cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card 4 -->
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <img src="download (1).jpg" alt="oneplus">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="title">huawei-pura-70</div>
-                                            <div class="small">Short description or small specifications</div>
-                                            <div class="footer">
-                                                <div>
-                                                    <div class="price">$379.99</div>
-                                                </div>
-                                                <button class="btn">Add to Cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-
-                            <div class="products swiper-wrapper" id="swiper_mobiles">
 
 
 
 
 
 
-                            </div>
+                    <div class="swiper-slide product" role="group" aria-label="2 / 7" data-swiper-slide-index="1" style="width: 164px; margin-right: 10px;">
+                        <span class="sale_present">%20</span>
 
-
-
-                            <div class="swiper-button-next btn_Swip"></div>
-                            <div class="swiper-button-prev btn_Swip"></div>
+                        <div class="img_product">
+                            <a href="#"><img src="download.jpg" alt=""></a>
                         </div>
 
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">iphone 16 pro max</a></p>
+
+                        <div class="price">
+                            <p><span>$1200</span></p>
+                            <p class="old_price">$1300</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="9">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="3 / 7" data-swiper-slide-index="2" style="width: 164px; margin-right: 10px;">
+                        <span class="sale_present">%13</span>
+
+                        <div class="img_product">
+                            <a href="#"><img src="download (1).jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#"> HUAWEI Pura 70(RAM:12GB, 500GB)</a></p>
+
+                        <div class="price">
+                            <p><span>$260</span></p>
+                            <p class="old_price">$300</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="11">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="4 / 7" data-swiper-slide-index="3" style="width: 164px; margin-right: 10px;">
+                        <span class="sale_present">%20</span>
+
+                        <div class="img_product">
+                            <a href="#"><img src="61TMssuJ-nL._AC_UL165_SR165,165_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Samsung Galaxy S25 Ultra AI Phone, 512GB Storage, 12GB RAM, Titanium Whitesilver, Android Smartphone, 200MP Camera, S Pen, Long Battery Life 1 Year Warranty/Local Version</a></p>
+
+                        <div class="price">
+                            <p><span>EGP65,950.00</span></p>
+                            <p class="old_price">EGP60,000</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="15">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="5 / 7" data-swiper-slide-index="4" style="width: 164px; margin-right: 10px;">
+                        <span class="sale_present">%14</span>
+
+                        <div class="img_product">
+                            <a href="#"><img src="61lLjrvDEkL._AC_UL320_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Apple iPhone 16 (128 GB) - Teal</a></p>
+
+                        <div class="price">
+                            <p><span>GP47,549.00</span></p>
+                            <p class="old_price">GP45,0000</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="16">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide product" role="group" aria-label="7 / 7" data-swiper-slide-index="6" style="width: 164px; margin-right: 10px;">
+                        <span class="sale_present">%21</span>
+
+                        <div class="img_product">
+                            <a href="#"><img src="61wjqIirjZL._AC_UL320_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Samsung Galaxy A56 5G, Android Smartphone, 256GB Storage, 12GB RAM</a></p>
+
+                        <div class="price">
+                            <p><span>$300</span></p>
+                            <p class="old_price">$380</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="24">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
                     </div>
                 </div>
 
 
 
-                <footer>
-                    <div class="container">
+                <div class="swiper-button-next btn_Swip" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper_items_sale"></div>
+                <div class="swiper-button-prev btn_Swip" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper_items_sale"></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 
-                        <div class="big_row">
-                            <img class="logo_footer" src="" alt="">
+        </div>
+    </div>
 
-                            <p>Contact me to solve all your services</p>
 
-                            <div class="icons_footer">
-                                <a href="tel:+201070319254"><i class="fa-solid fa-phone"></i></a>
-                                <a href="https://www.facebook.com/share/12Efgx7BpbF/"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="https://www.instagram.com/mo7amed.k.7ammad?igsh=MTZhbnVkN21mZmtwaQ=="><i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://wa.me/qr/HRHSYIM2UWV7A1"></i><i class="fa-brands fa-square-whatsapp"></i></a>
+    <div class="banners">
+        <div class="container">
+            <div class="banners_boxs banner_2_img">
+                <a href="#" class="box"><img src="banner_box4.jpg" alt=""></a>
+                <a href="#" class="box"><img src="banner_box5.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
 
-                            </div>
+
+    <div class="slider_products slide">
+
+        <div class="container">
+
+            <div class="slide_product mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+
+                <div class="top_slide">
+                    <h2><i class="fa-solid fa-tags"></i> Electronics</h2>
+                </div>
+
+                <div class="products swiper-wrapper" id="swiper_elctronics" aria-live="off" style="transition-duration: 300ms;">
+
+
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="0.png" alt=""></a>
                         </div>
 
-                        <div class="row">
-                            <h4>Find It Fast</h4>
-
-                            <div class="links">
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Laptops & Computers </a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> TV & Audio</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Appliances</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a>
-                            </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
 
+                        <p class="name_product"><a href="#">SAMSUNG 55 Inch UHD 4K Smart TV With Receiver</a></p>
 
-                        <div class="row">
-                            <h4>Quick Links</h4>
+                        <div class="price">
+                            <p><span>$350</span></p>
 
-                            <div class="links">
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account </a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase Hisotry</a>
-                            </div>
                         </div>
 
-
-                        <div class="row">
-                            <h4>Service us</h4>
-
-                            <div class="links">
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Term & Conditions</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
-                                <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
-                            </div>
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="0">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
                         </div>
                     </div>
 
-                    <div class="bottom_footer">
-                        <div class="container">
-                            <p>&copy; <span>eng.mohamed hammad Store.</span></p>
 
-                            <div class="payment_img">
-                                <img src="payment_method.png" alt="">
-                            </div>
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="2 / 10" data-swiper-slide-index="1" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="2.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Dell Laptop Latitude 5530 Core i7-1255U 8GB SSD</a></p>
+
+                        <div class="price">
+                            <p><span>$400</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="2">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
                         </div>
                     </div>
-                </footer>
 
 
 
 
 
 
-                <!-- Swiper JS -->
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                <!-- File JS -->
+                    <div class="swiper-slide product" role="group" aria-label="3 / 10" data-swiper-slide-index="2" style="width: 164px; margin-right: 10px;">
 
-                <script src="JS/swiper.js"></script>
-                <script src="JS/items_home.js"></script>
-                <script src="JS/main.js"></script>
+
+                        <div class="img_product">
+                            <a href="#"><img src="3.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Canon EOS RP Mirrorless Camera</a></p>
+
+                        <div class="price">
+                            <p><span>$530</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="3">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="4 / 10" data-swiper-slide-index="3" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="41joL1WchdL._AC_UL232_SR232,232_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">TOSHIBA Washing Machine 11 Kg Pump Silver AEW-E1150SUP(DS)</a></p>
+
+                        <div class="price">
+                            <p><span>EGP17,775.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="5">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="5 / 10" data-swiper-slide-index="4" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="71587VZ4AIL.__AC_SX342_SY445_QL70_ML2_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Toshiba Refrigerator GR-RT622WE-PMN(06), Origin Inverter,Airfall Cooling System</a></p>
+
+                        <div class="price">
+                            <p><span>EGP29,999.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="7">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="6 / 10" data-swiper-slide-index="5" style="width: 164px; margin-right: 10px;">
+
+                        <span class="sale_present">%20</span>
+                        <div class="img_product">
+                            <a href="#"><img src="9.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Handheld Barcode Scanner 1D/2D/QR Code</a></p>
+
+                        <div class="price">
+                            <p><span>$80</span></p>
+                            <p class="old_price">$100</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="9">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="7 / 10" data-swiper-slide-index="6" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="10.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Large Venue building mapping Projector</a></p>
+
+                        <div class="price">
+                            <p><span>$300</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="10">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="8 / 10" data-swiper-slide-index="7" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="12.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">HP DeskJet 2710 Printer, All-in-One</a></p>
+
+                        <div class="price">
+                            <p><span>$370</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="12">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="9 / 10" data-swiper-slide-index="8" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="17.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">HIKVISION PTZ Camera 4K Outdoo</a></p>
+
+                        <div class="price">
+                            <p><span>$185</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="17">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="10 / 10" data-swiper-slide-index="9" style="width: 164px; margin-right: 10px;">
+
+                        <span class="sale_present">%21</span>
+                        <div class="img_product">
+                            <a href="#"><img src="61B7dn9ZUYL._AC_SL1500_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Samsung 50 Inch 4K UHD Smart LED TV - Black - UA50DU7000UXEG [2024 Model]</a></p>
+
+                        <div class="price">
+                            <p><span>EGP17,949.00</span></p>
+                            <p class="old_price">EGP15,000</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="24">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="swiper-button-next btn_Swip" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper_elctronics"></div>
+                <div class="swiper-button-prev btn_Swip" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper_elctronics"></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+        </div>
+    </div>
+
+
+    <div class="slider_products slide">
+
+        <div class="container">
+
+            <div class="slide_product mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+
+                <div class="top_slide">
+                    <h2><i class="fa-solid fa-tags"></i> Appliances</h2>
+                </div>
+
+                <div class="products swiper-wrapper" id="swiper_appliances" aria-live="off" style="transition-duration: 300ms;">
+
+
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="1 / 8" data-swiper-slide-index="0" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="81i7ltXHBxL._AC_UL320_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Black+Decker Digital Air Fryer Oven Digital Temperature Control 10 Preset Programs 12L Silver </a></p>
+
+                        <div class="price">
+                            <p><span> EGP5,010.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="13">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="2 / 8" data-swiper-slide-index="1" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="71K1RSkPrTL._AC_UL320_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">LOMUG Mini Round Waffle Maker, Non-Stick Belgian Waffle Maker for Home & Kids Birthdays</a></p>
+
+                        <div class="price">
+                            <p><span>EGP192.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="14">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="3 / 8" data-swiper-slide-index="2" style="width: 164px; margin-right: 10px;">
+
+                        <span class="sale_present">%14</span>
+                        <div class="img_product">
+                            <a href="#"><img src="31Ixi3jmmWL._AC_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Generic Air Fryer, 1500W, Quick Heating, Versatile Cooking, Auto Shut-Off & Thermal Shield</a></p>
+
+                        <div class="price">
+                            <p><span>EGP3,799.00</span></p>
+                            <p class="old_price">EGP4,500</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="16">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="4 / 8" data-swiper-slide-index="3" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="19.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">VIVAX kettle WH-175L with a capacity of 1.7 </a></p>
+
+                        <div class="price">
+                            <p><span>$140</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="19">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="5 / 8" data-swiper-slide-index="4" style="width: 164px; margin-right: 10px;">
+
+                        <span class="sale_present">%15</span>
+                        <div class="img_product">
+                            <a href="#"><img src="20.png" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Kenstar Ester ABS Plastic 750W Mixer Grinder</a></p>
+
+                        <div class="price">
+                            <p><span>$280</span></p>
+                            <p class="old_price">$330</p>
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart active" data-id="20">
+                                <i class="fa-solid fa-cart-shopping"></i> Item in cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="6 / 8" data-swiper-slide-index="5" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="31Ixi3jmmWL._AC_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Grill Indoor Electric1800W </a></p>
+
+                        <div class="price">
+                            <p><span>EGP5,985.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="21">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="7 / 8" data-swiper-slide-index="6" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="51ULl24ZVVL._AC_UL320_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Platinum Plus Kitchen Appliance </a></p>
+
+                        <div class="price">
+                            <p><span>EGP5,750.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="22">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="8 / 8" data-swiper-slide-index="7" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="613iXjf1cjL._AC_UL320_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Black & Decker 800W Multifunction 5-in-1 Food Processor, White - FX822-B5</a></p>
+
+                        <div class="price">
+                            <p><span>EGP3,829.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="23">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="swiper-button-next btn_Swip" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper_appliances"></div>
+                <div class="swiper-button-prev btn_Swip" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper_appliances"></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+        </div>
+    </div>
+
+
+    <div class="banners">
+        <div class="container">
+            <div class="banners_boxs banner_3_img">
+                <a href="#" class="box"><img src="banner_box1.jpg" alt=""></a>
+                <a href="#" class="box"><img src="banner_box2.jpg" alt=""></a>
+                <a href="#" class="box"><img src="banner_box3.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slider_products slide">
+
+        <div class="container">
+
+            <div class="slide_product mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+
+                <div class="top_slide">
+                    <h2><i class="fa-solid fa-tags"></i> Mobiles</h2>
+                </div>
+
+                <div class="products swiper-wrapper" id="swiper_mobiles" aria-live="off" style="transition-duration: 300ms;">
+
+
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="1 / 7" data-swiper-slide-index="0" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src="71loUpMg0pL._AC_UL320_.jpg" alt=""></a>
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="name_product"><a href="#">Google Pixel 7 Single SIM, 5G, 8GB Ram, 256GB<a></p>
+
+                        <div class="price">
+                            <p><span>EGP25,550.00</span></p>
+
+                        </div>
+
+                        <div class="icons">
+                            <span class="btn_add_cart " data-id="1">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                            <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="swiper-slide product" role="group" aria-label="2 / 7" data-swiper-slide-index="1" style="width: 164px; margin-right: 10px;">
+
+
+                        <div class="img_product">
+                            <a href="#"><img src=" EGP5,999.00" alt=""></a>
+                    </div>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="name_product"><a href="#">Samsung Galaxy A05s, LTE, Android Smartphone, Dual SIM Mobile Phone, 6GB RAM, 128GB</a></p>
+
+                    <div class="price">
+                        <p><span> EGP5,999.00</span></p>
+
+                    </div>
+
+                    <div class="icons">
+                        <span class="btn_add_cart " data-id="4">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                        <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="swiper-slide product" role="group" aria-label="3 / 7" data-swiper-slide-index="2" style="width: 164px; margin-right: 10px;">
+
+                    <span class="sale_present">%26</span>
+                    <div class="img_product">
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="name_product"><a href="#">Oppo Reno 14F 5G 12Gb 256GB Opal Blue</a></p>
+
+                    <div class="price">
+                        <p><span>EGP18,777.00</span></p>
+                        <p class="old_price">EGP20,000</p>
+                    </div>
+
+                    <div class="icons">
+                        <span class="btn_add_cart " data-id="6">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                        <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="swiper-slide product" role="group" aria-label="4 / 7" data-swiper-slide-index="3" style="width: 164px; margin-right: 10px;">
+
+
+                    <div class="img_product">
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="name_product"><a href="#">GT 20 Pro 5G (Mecha Orange, 8GB RAM, 256GB Storage) | Up to 16GB Extented RAM | 6.78" AMOLED Display |</a></p>
+
+                    <div class="price">
+                        <p><span>EGP23,999.00</span></p>
+
+                    </div>
+
+                    <div class="icons">
+                        <span class="btn_add_cart " data-id="8">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                        <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="swiper-slide product" role="group" aria-label="5 / 7" data-swiper-slide-index="4" style="width: 164px; margin-right: 10px;">
+
+                    <span class="sale_present">%13</span>
+                    <div class="img_product">
+                        <a href="#"><img src="img/product/11.png" alt=""></a>
+                    </div>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="name_product"><a href="#">Infinix Hot 40i (RAM: 4+4GB, 128GB)</a></p>
+
+                    <div class="price">
+                        <p><span>$260</span></p>
+                        <p class="old_price">$300</p>
+                    </div>
+
+                    <div class="icons">
+                        <span class="btn_add_cart " data-id="11">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                        <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="swiper-slide product" role="group" aria-label="6 / 7" data-swiper-slide-index="5" style="width: 164px; margin-right: 10px;">
+
+                    <span class="sale_present">%20</span>
+                    <div class="img_product">
+                        <a href="#"><img src="img/product/15.png" alt=""></a>
+                    </div>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="name_product"><a href="#">Infinix Smart 6 Plus (Miracle Black)</a></p>
+
+                    <div class="price">
+                        <p><span>$240</span></p>
+                        <p class="old_price">$300</p>
+                    </div>
+
+                    <div class="icons">
+                        <span class="btn_add_cart " data-id="15">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                        <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="swiper-slide product" role="group" aria-label="7 / 7" data-swiper-slide-index="6" style="width: 164px; margin-right: 10px;">
+
+
+                    <div class="img_product">
+                        <a href="#"><img src="img/product/18.png" alt=""></a>
+                    </div>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="name_product"><a href="#">OPPO Reno11 5G 256GB 12GB</a></p>
+
+                    <div class="price">
+                        <p><span>$225</span></p>
+
+                    </div>
+
+                    <div class="icons">
+                        <span class="btn_add_cart " data-id="18">
+                                <i class="fa-solid fa-cart-shopping"></i> add to cart
+                            </span>
+                        <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="swiper-button-next btn_Swip" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper_mobiles"></div>
+            <div class="swiper-button-prev btn_Swip" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper_mobiles"></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+    </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+
+            <div class="big_row">
+                <img class="logo_footer" src="hammad store.png " alt="">
+
+                <p></p>
+
+                <div class="icons_footer">
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Find It Fast</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Mobiles </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Tablets</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> TV</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Electronics</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i>  Watches</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Quick Links</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account </a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Service us</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>© <span>eng.ohamed kamal Store.</span> All Rights Reserved.</p>
+
+                <div class="payment_img">
+                    <img src="2507DR0004_BAU_EG_XSite_GW_SWM_NBEVISA_400x39_EN._CB800375439_.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- File JS -->
+
+    <script src="JS/swiper.js"></script>
+    <script src="JS/items_home.js"></script>
+    <script src="JS/main.js"></script>
+
 </body>
 
 </html>
